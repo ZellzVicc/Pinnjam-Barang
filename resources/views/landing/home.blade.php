@@ -13,7 +13,7 @@
                             repot, semua langsung beres!
                         </p>
                     </div>
-                    <a href="#" class="get-started-btn mt-2">Get Started</a>
+                    <a href="#" class="get-started-btn mt-2" data-bs-toggle="modal" data-bs-target="#registerModal">Get Started</a>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="{{ asset('images/asset/borrower.png') }}" alt="Ilustrasi" class="img-fluid" style="max-width: 90%;">
@@ -38,7 +38,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Elektronik</h5>
                     <p class="card-text text-muted">Peralatan elektronik untuk pembelajaran dan presentasi</p>
-                    <p class="text-primary fw-semibold">24 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -52,7 +51,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Alat Olahraga</h5>
                     <p class="card-text text-muted">Perlengkapan olahraga untuk berbagai aktivitas fisik</p>
-                    <p class="text-primary fw-semibold">18 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -66,7 +64,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Alat Laboratorium</h5>
                     <p class="card-text text-muted">Peralatan untuk praktikum dan eksperimen sains</p>
-                    <p class="text-primary fw-semibold">32 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -80,7 +77,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Alat Musik</h5>
                     <p class="card-text text-muted">Instrumen musik untuk kegiatan seni dan ekstrakurikuler</p>
-                    <p class="text-primary fw-semibold">15 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -94,7 +90,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Alat Kebersihan</h5>
                     <p class="card-text text-muted">Peralatan untuk menjaga kebersihan lingkungan sekolah</p>
-                    <p class="text-primary fw-semibold">20 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -108,7 +103,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Perlengkapan Kelas</h5>
                     <p class="card-text text-muted">Peralatan pendukung kegiatan belajar mengajar</p>
-                    <p class="text-primary fw-semibold">28 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -122,7 +116,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Media Pembelajaran</h5>
                     <p class="card-text text-muted">Alat peraga dan media pembelajaran interaktif</p>
-                    <p class="text-primary fw-semibold">22 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -136,7 +129,6 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bold">Perlengkapan Acara</h5>
                     <p class="card-text text-muted">Peralatan untuk mendukung acara sekolah</p>
-                    <p class="text-primary fw-semibold">16 barang tersedia</p>
                 </div>
             </div>
         </div>
@@ -298,4 +290,6 @@
         </div>
     </div>
 </div>
+@include('auth.modal-login')
+@include('auth.modal-register')
 @endsection

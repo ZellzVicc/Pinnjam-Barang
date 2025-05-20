@@ -9,18 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('username')->unique();
-            $table->string('email')->nullable();
+            $table->id('user_id');
+            $table->string('nama', 100);
+            $table->string('username', 50)->unique();
             $table->string('password');
-            $table->enum('role', ['admin', 'operator', 'peminjam'])->default('peminjam');
+            $table->string('email', 100)->unique();
+            $table->enum('role', ['admin', 'operator', 'peminjam']);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -28,7 +29,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
-        Schema::dropIfExists('sessions');
     }
 };
