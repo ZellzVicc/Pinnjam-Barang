@@ -23,8 +23,8 @@ Route::middleware(['auth'])->group(function () {
 
         if ($role === 'admin') {
             return redirect()->route('admin.dashboard');
-        } else if ($role === 'operator') {
-            return redirect()->route('operator.dashboard');
+        // } else if ($role === 'operator') {
+        //     return redirect()->route('operator.dashboard');
         } else {
             return redirect()->route('peminjam.dashboard');
         }
@@ -34,11 +34,13 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.admin.index');
     })->name('admin.dashboard');
 
-    Route::get('/operator/dashboard', function () {
-        return view('dashboard.operator.index');
-    })->name('operator.dashboard');
+    // Route::get('/operator/dashboard', function () {
+    //     return view('dashboard.operator.index');
+    // })->name('operator.dashboard');
 
     Route::get('/peminjam/dashboard', function () {
         return view('dashboard.peminjam.index');
     })->name('peminjam.dashboard');
-});
+    });
+
+
